@@ -9,6 +9,7 @@
     "test": "ng test",
     "serve:ssr:AngularMidterm_Samdao": "node dist/angular-midterm-samdao/server/server.mjs"
   },
+  
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.2.0",
