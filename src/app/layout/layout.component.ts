@@ -14,7 +14,7 @@ import { UserAccountsComponent } from "../user-accounts/user-accounts.component"
     HeaderComponent,
     BodyComponent,
     FooterComponent,
-    UserAccountsComponent],
+    UserAccountsComponent,],
     
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.css'

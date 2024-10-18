@@ -10,7 +10,7 @@ body {
 
 }
 .jumbotron {
-  background-color: #e9ecef;
+  background-color: #f7f7f7;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
@@ -26,7 +26,6 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-right: 270px;
   margin-left: 270px;
-
 }
 input[type="text"],
 input[type="password"] {
