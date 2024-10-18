@@ -1,22 +1,24 @@
-<title>Jumbotron and Login Form</title>
 <body>
+    <div class="container">
+        <div class="column">
+            <div class="jumbotron">
+                <h1>Jumbotron!</h1>
+                <p>Application Development</p>
+            </div>
+        </div>
 
-<div class="column">
-    <div class="jumbotron">
-        <h1>Jumbotron!</h1>
-        <p>Application Development</p>
+        <div class="column">
+            <div class="login-form">
+                <h2>Login</h2>
+                <form>
+                    <input type="text" placeholder="Username" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
     </div>
-</div>
-
-<div class="column">
-    <div class="login-form">
-        <h2>Login</h2>
-        <form>
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-    </div>
-</div>
-
 </body>
+
+
+<app-user-accounts></app-user-accounts>

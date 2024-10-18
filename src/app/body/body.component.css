@@ -1,14 +1,27 @@
 body {
-  display: flex;
   justify-content: center;
+  align-items: center;
   padding: 20px;
   font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  min-height: 100vh; /* Full height for background */
+  margin: 0;
 }
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stacks columns vertically */
+  align-items: center;    /* Centers columns */
+}
+
 .column {
   margin: 10px;
   flex: 1;
-
+  max-width: 500px; /* Restricts the width of the columns */
+  width: 100%;      /* Ensures it is responsive */
 }
+
+/* Jumbotron */
 .jumbotron {
   background-color: #f7f7f7;
   border-radius: 5px;
@@ -16,25 +29,26 @@ body {
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+/* Login Form */
 .login-form {
-  width: 50%;
-  text-align: center;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-right: 270px;
-  margin-left: 270px;
+  text-align: center;
 }
+
 input[type="text"],
 input[type="password"] {
-  width: 100%;
+  width: calc(100% - 20px); /* Adjusts for padding */
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
 button {
   background-color: #007bff;
   color: white;
@@ -44,6 +58,7 @@ button {
   cursor: pointer;
   width: 100%;
 }
+
 button:hover {
   background-color: #0056b3;
 }
