@@ -1,6 +1,7 @@
 body {
   padding: 20px;
   font-family: Arial, sans-serif;
+  align-items: center;
 }
   .form-container {
   background-color: #f9f9f9;
