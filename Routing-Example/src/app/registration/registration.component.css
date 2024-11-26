@@ -1,0 +1,23 @@
+.container {
+  max-width: 600px;
+}
+
+h2 {
+  color: #4a90e2;
+}
+
+.form-control {
+  margin-bottom: 15px;
+}
+
+button {
+  font-size: 1.1rem;
+}
+
+.shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  color: #28a745;
+}
