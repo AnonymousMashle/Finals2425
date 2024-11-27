@@ -1,0 +1,25 @@
+.service-detail-form {
+    width: 50%;
+    margin: auto;
+  }
+  
+  .service-detail-form div {
+    margin-bottom: 15px;
+  }
+  
+  .service-detail-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .service-detail-form input, .service-detail-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .service-detail-form button {
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+  

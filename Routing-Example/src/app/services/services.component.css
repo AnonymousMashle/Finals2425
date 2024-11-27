@@ -1,0 +1,14 @@
+.service-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .service-table th, .service-table td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+  }
+  
+  .service-table th {
+    background-color: #f4f4f4;
+  }
+  
