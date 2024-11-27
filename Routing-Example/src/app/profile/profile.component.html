@@ -1,7 +1,7 @@
 <div class="container mt-5">
   <h2 class="text-center mb-4">Profile</h2>
   <form (ngSubmit)="onSubmit()" #profileForm="ngForm" class="shadow p-4 bg-light rounded">
-    <!-- Username -->
+
     <div class="form-group">
       <label for="username">Username</label>
       <input
@@ -14,7 +14,6 @@
       />
     </div>
 
-    <!-- Address -->
     <div class="form-group">
       <label for="address">Address</label>
       <input
@@ -27,7 +26,7 @@
       />
     </div>
 
-    <!-- Phone Number -->
+
     <div class="form-group">
       <label for="phone">Phone Number</label>
       <input
@@ -40,13 +39,11 @@
       />
     </div>
 
-    <!-- Submit Button -->
     <button type="submit" class="btn btn-primary btn-block" [disabled]="!profileForm.form.valid">
       Save Profile
     </button>
   </form>
 
-  <!-- Display Saved Data -->
   <div *ngIf="isSubmitted" class="mt-4">
     <h3>Profile Updated!</h3>
     <p><strong>Username:</strong> {{ user.username }}</p>
