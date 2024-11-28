@@ -13,7 +13,7 @@ export class ServicesComponent {
 
   services = [
     { id: 1, name: 'Reincarnation', description: 'Mabuhay kang Muli' },
-    { id: 2, name: 'Trip To Olympus', description: 'Meet Zues and others' },
+    { id: 2, name: 'Trip To Olympus', description: 'Meet Zues' },
     { id: 3, name: 'Food War', description: 'Making Food Fight' },
   ];
 
