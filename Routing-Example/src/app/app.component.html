@@ -1,6 +1,6 @@
-<div class="container">
-  <div class="left-panel">
-    <router-outlet name="services"></router-outlet>
+<div style="display: flex; height: 100vh;">
+  <div style="flex: 1; border-right: 1px solid #ddd;">
+    <router-outlet name="left"></router-outlet>
   </div>
 
 
@@ -43,7 +43,7 @@
     <router-outlet></router-outlet>
   </div>
 
-  <div class="right-panel">
-    <router-outlet name="serviceDetails"></router-outlet>
+  <div style="flex: 1; border-left: 1px solid #ddd;">
+    <router-outlet name="right"></router-outlet>
   </div>
 </div>

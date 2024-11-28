@@ -1,14 +1,98 @@
-.service-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .service-table th, .service-table td {
-    padding: 8px 12px;
-    border: 1px solid #ddd;
-  }
-  
-  .service-table th {
-    background-color: #f4f4f4;
-  }
-  
+.services-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.services-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: #ffecb3;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.services-form label {
+  width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.services-form input {
+  width: calc(33.33% - 10px);
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.add-btn:hover {
+  opacity: 0.8;
+}
+
+
+
+.services-table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: #f9f9f9;
+}
+
+.services-table th, .services-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.services-table th {
+  background-color: #ff7043;
+  color: white;
+}
+
+.services-table tr:nth-child(even) {
+  background-color: #ffe0b2;
+}
+
+.services-table tr:hover {
+  background-color: #ffcc80;
+}
+
+.view-btn, .edit-btn, .delete-btn {
+  background-color: transparent;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: white;
+}
+
+.view-btn {
+  background-color: #4caf50;
+}
+
+.edit-btn {
+  background-color: #2196f3;
+}
+
+.delete-btn {
+  background-color: #f44336;
+}
+
+button:hover {
+  opacity: 0.8;
+}

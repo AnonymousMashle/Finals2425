@@ -1,33 +1,38 @@
-<h2>Service Details</h2>
+<div class="service-details-container">
+  <h2>Service Details</h2>
 
-<form>
-  <div>
+  <form class="service-details-form" (ngSubmit)="saveService()">
     <label for="id">Service ID:</label>
-    <input type="text" id="id" [(ngModel)]="service.id" name="id" readonly />
-  </div>
+    <input id="id" type="number"
+      [(ngModel)]="serviceDetails.id" name="id"
+      required placeholder="Enter Service ID"/>
 
-  <div>
     <label for="name">Service Name:</label>
-    <input type="text" id="name" [(ngModel)]="service.name" name="name" />
-  </div>
+    <input id="name" type="text"
+      [(ngModel)]="serviceDetails.name" name="name"
+      required placeholder="Enter Service Name"/>
 
-  <div>
     <label for="description">Service Description:</label>
-    <input type="text" id="description" [(ngModel)]="service.description" name="description" />
-  </div>
+    <textarea
+      id="description"
+      [(ngModel)]="serviceDetails.description" name="description"
+      required placeholder="Enter Service Description">
+    </textarea>
 
-  <div>
     <label for="category">Service Category:</label>
-    <input type="text" id="category" [(ngModel)]="service.category" name="category" />
-  </div>
+    <input id="category" type="text"
+      [(ngModel)]="serviceDetails.category" name="category"
+      required placeholder="Enter Service Category"/>
 
-  <div>
-    <label for="price">Price:</label>
-    <input type="number" id="price" [(ngModel)]="service.price" name="price" />
-  </div>
+    <label for="cost">Cost or Price:</label>
+    <input id="cost" type="number"
+      [(ngModel)]="serviceDetails.cost" name="cost"
+      required placeholder="Enter Cost or Price"/>
 
-  <div>
-    <button type="button" (click)="saveService()">Save</button>
-    <button type="button" (click)="cancel()">Cancel</button>
-  </div>
-</form>
+    <div class="buttons">
+      <button type="submit" class="save-btn">Save</button>
+      
+      <button type="button" class="cancel-btn" (click)="cancelOperation()">Cancel</button>
+    </div>
+  </form>
+</div>

@@ -9,9 +9,6 @@ import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angul
   imports: [RouterModule,
     ReactiveFormsModule,
     CommonModule,
-    RouterLinkActive,
-    RouterLink,
-    RouterOutlet
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

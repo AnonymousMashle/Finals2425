@@ -1,41 +1,47 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-service-details',
   standalone: true,
+  imports:[FormsModule, CommonModule],
   templateUrl: './service-details.component.html',
   styleUrls: ['./service-details.component.css'],
-  imports: [CommonModule, FormsModule]  // Import FormsModule for ngModel support
 })
-export class ServiceDetailsComponent implements OnInit {
-  service = { id: 0, name: '', description: '', category: '', price: 0 };
+export class ServiceDetailsComponent {
+  serviceDetails = {
+    id: 0,
+    name: '',
+    description: '',
+    category: '',
+    cost: 0,
+  };
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
-
-  ngOnInit(): void {
-    const serviceId = +this.route.snapshot.paramMap.get('id')!;
-    this.getServiceDetails(serviceId);
+  saveService() {
+    if (
+      this.serviceDetails.id &&
+      this.serviceDetails.name &&
+      this.serviceDetails.description &&
+      this.serviceDetails.category &&
+      this.serviceDetails.cost
+    ) {
+      alert('Service details saved successfully!');
+      console.log(this.serviceDetails);
+    } else {
+      alert('Please fill in all fields.');
+    }
   }
 
-  getServiceDetails(id: number): void {
-    const services = [
-      { id: 1, name: 'Web Development', description: 'Building websites', category: 'Development', price: 500 },
-      { id: 2, name: 'SEO Optimization', description: 'Optimizing websites for search engines', category: 'Marketing', price: 200 },
-      { id: 3, name: 'App Development', description: 'Mobile application development', category: 'Development', price: 800 },
-    ];
-
-    this.service = services.find(service => service.id === id)!;
-  }
-
-  saveService(): void {
-    console.log('Saving service', this.service);
-    this.router.navigate([{ outlets: { serviceDetails: null } }]);
-  }
-
-  cancel(): void {
-    this.router.navigate([{ outlets: { serviceDetails: null } }]);
+  cancelOperation() {
+    if (confirm('Are you sure you want to cancel? Unsaved changes will be lost.')) {
+      this.serviceDetails = {
+        id: 0,
+        name: '',
+        description: '',
+        category: '',
+        cost: 0,
+      };
+    }
   }
 }

@@ -4,7 +4,6 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ProfileComponent } from './profile/profile.component';
-import { NotfoundComponent } from './notfound/notfound.component';
 import { ServicesComponent } from './services/services.component';
 import { ServiceDetailsComponent } from './service-details/service-details.component';
 
@@ -13,10 +12,9 @@ export const routes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: 'registration', component: RegistrationComponent},
   { path: 'profile', component: ProfileComponent},
-  { path: 'services', component: ServicesComponent, outlet: 'services' },
-  { path: 'services/:id', component: ServiceDetailsComponent, outlet: 'serviceDetails'}
+  { path: 'services', component: ServicesComponent, outlet: 'left' },
+  { path: 'service-details', component: ServiceDetailsComponent, outlet: 'right'}
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

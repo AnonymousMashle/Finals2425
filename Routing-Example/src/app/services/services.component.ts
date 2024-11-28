@@ -1,32 +1,45 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-services',
+  standalone: true,
+  imports:[FormsModule,CommonModule],
   templateUrl: './services.component.html',
-  styleUrls: ['./services.component.css']
+  styleUrls: ['./services.component.css'],
 })
 export class ServicesComponent {
+
   services = [
-    { id: 1, name: 'Web Development', description: 'Building websites' },
-    { id: 2, name: 'SEO Optimization', description: 'Optimizing websites for search engines' },
-    { id: 3, name: 'App Development', description: 'Mobile application development' },
+    { id: 1, name: 'Reincarnation', description: 'Mabuhay kang Muli' },
+    { id: 2, name: 'Trip To Olympus', description: 'Meet Zues and others' },
+    { id: 3, name: 'Food War', description: 'Making Food Fight' },
   ];
 
-  constructor(private router: Router) {}
+
+  newService = { id: 0, name: '', description: '' };
+
+
+  addService() {
+    if (this.newService.id && this.newService.name && this.newService.description) {
+      this.services.push({ ...this.newService });
+      this.newService = { id: 0, name: '', description: '' };
+    } else {
+      alert('Please fill in all fields.');
+    }
+  }
+
+
 
   viewService(id: number) {
-    this.router.navigate(['/services', id]);
+    alert(`Viewing details of Service ID: ${id}`);
   }
-
   editService(id: number) {
-    // Handle editing logic (this can be navigated to another route for editing)
-    console.log(`Editing service with ID: ${id}`);
+    alert(`Editing Service ID: ${id}`);
   }
-
   deleteService(id: number) {
-    // Handle delete logic (confirm before deleting)
     this.services = this.services.filter(service => service.id !== id);
-    console.log(`Deleted service with ID: ${id}`);
+    alert(`Deleted Service ID: ${id}`);
   }
 }

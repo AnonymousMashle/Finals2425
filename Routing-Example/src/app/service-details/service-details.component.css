@@ -1,25 +1,77 @@
-.service-detail-form {
-    width: 50%;
-    margin: auto;
-  }
-  
-  .service-detail-form div {
-    margin-bottom: 15px;
-  }
-  
-  .service-detail-form label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .service-detail-form input, .service-detail-form textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-  }
-  
-  .service-detail-form button {
-    padding: 10px 20px;
-    margin-top: 10px;
-  }
-  
+.service-details-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #e3f2fd;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #1565c0;
+}
+
+.service-details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.service-details-form label {
+  font-weight: bold;
+  color: #424242;
+}
+
+.service-details-form input,
+.service-details-form textarea {
+  padding: 10px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.service-details-form input:focus,
+.service-details-form textarea:focus {
+  outline: none;
+  border-color: #42a5f5;
+  box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.save-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #43a047;
+}
+
+.cancel-btn:hover {
+  background-color: #e53935;
+}
