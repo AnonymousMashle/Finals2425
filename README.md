@@ -23,5 +23,3 @@ here's what she instructed in our activity:
 3. Router Outlet
      a. Service Component should be displayed on the left side using a named router.
      b. While Service Details is displayed on the right
-
-can you help me with this activity.

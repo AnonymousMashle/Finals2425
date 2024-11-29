@@ -1,0 +1,28 @@
+/* header.component.css */
+
+/* Make the navbar sticky at the top */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%; /* Ensure it spans the entire width */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+/* Optional: Add some padding to the body to prevent content from being hidden under the navbar */
+body {
+  padding-top: 56px; /* Adjust this based on your navbar height */
+}
+
+/* Add styling for active links */
+.nav-link.active {
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Styling for collapsed navbar on smaller screens */
+@media (max-width: 768px) {
+  .navbar-toggler {
+    border-color: transparent;
+  }
+}

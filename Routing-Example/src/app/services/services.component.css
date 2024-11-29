@@ -1,6 +1,6 @@
 .services-container {
   text-align: center;
-  padding: 20px;
+  padding-top: 100px;
 }
 
 .services-form {
@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 20px;
-  background: #ffecb3;
+  background: #fffffd;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -60,12 +60,12 @@
 }
 
 .services-table th {
-  background-color: #ff7043;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
 }
 
 .services-table tr:nth-child(even) {
-  background-color: #ffe0b2;
+  background-color: #fafafa;
 }
 
 .services-table tr:hover {

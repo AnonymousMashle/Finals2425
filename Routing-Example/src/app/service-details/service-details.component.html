@@ -9,25 +9,21 @@
 
     <label for="name">Service Name:</label>
     <input id="name" type="text"
-      [(ngModel)]="serviceDetails.name" name="name"
-      required placeholder="Enter Service Name"/>
+      [(ngModel)]="serviceDetails.name" name="name"/>
 
     <label for="description">Service Description:</label>
     <textarea
       id="description"
-      [(ngModel)]="serviceDetails.description" name="description"
-      required placeholder="Enter Service Description">
+      [(ngModel)]="serviceDetails.description" name="description">
     </textarea>
 
     <label for="category">Service Category:</label>
     <input id="category" type="text"
-      [(ngModel)]="serviceDetails.category" name="category"
-      required placeholder="Enter Service Category"/>
+      [(ngModel)]="serviceDetails.category" name="category"/>
 
     <label for="cost">Cost or Price:</label>
     <input id="cost" type="number"
-      [(ngModel)]="serviceDetails.cost" name="cost"
-      required placeholder="Enter Cost or Price"/>
+      [(ngModel)]="serviceDetails.cost" name="cost"/>
 
     <div class="buttons">
       <button type="submit" class="save-btn">Save</button>
