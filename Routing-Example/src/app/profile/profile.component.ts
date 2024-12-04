@@ -11,9 +11,13 @@ import { FormsModule } from '@angular/forms';
 })
 export class ProfileComponent {
   user = {
-    username: '',
+    firstName: '',
+    lastName: '',
+    contact: '',
     address: '',
-    phone: ''
+    sex: '',
+    civilStatus: '',
+    birthdate: ''
   };
   isSubmitted = false;
 

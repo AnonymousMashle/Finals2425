@@ -1,28 +1,106 @@
-/* header.component.css */
-
-/* Make the navbar sticky at the top */
 .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  width: 100%; /* Ensure it spans the entire width */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+  background-color: #007bff; 
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  z-index: 1000; 
+  padding: 0px; 
 }
 
-/* Optional: Add some padding to the body to prevent content from being hidden under the navbar */
-body {
-  padding-top: 56px; /* Adjust this based on your navbar height */
-}
 
-/* Add styling for active links */
-.nav-link.active {
-  font-weight: bold;
+.navbar .navbar-brand {
   color: #fff;
+  font-size: 20px; 
 }
 
-/* Styling for collapsed navbar on smaller screens */
+.navbar .navbar-nav .nav-item .nav-link {
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 18px;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  background-color: #0056b3; 
+  border-radius: 2px;
+}
+
+
+
+
+/*Search*/
+.navbar {
+  background-color: #007bff; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between; 
+}
+
+
+.navbar .navbar-brand {
+  color: #fff;
+  font-size: 24px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 18px;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  background-color: #0056b3;
+  border-radius: 5px;
+}
+
+
+.navbar .navbar-nav {
+  margin-left: auto; 
+}
+
+.navbar .form-inline {
+  display: flex;
+  justify-content: flex-end; 
+}
+
+
+.navbar .form-control {
+  width: 250px; 
+  border-radius: 20px;
+  padding: 10px;
+  margin-right: 10px; 
+}
+
+
+.navbar .btn {
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+
+.navbar .btn:hover {
+  background-color: #fff;
+  color: #007bff;
+  border-color: #007bff;
+}
+
+
 @media (max-width: 768px) {
-  .navbar-toggler {
-    border-color: transparent;
+  .navbar .form-inline {
+    width: 100%;
+    justify-content: center; 
+  }
+
+  .navbar .form-control {
+    width: 200px;
   }
 }

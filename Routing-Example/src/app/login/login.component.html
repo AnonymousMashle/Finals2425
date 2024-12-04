@@ -1,0 +1,48 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Login</h2>
+  <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="shadow p-4 bg-light rounded">
+
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        class="form-control"
+        [(ngModel)]="loginData.username"
+        name="username"
+        required
+        placeholder="Who are YOu"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        class="form-control"
+        [(ngModel)]="loginData.password"
+        name="password"
+        required
+        placeholder="Whats The Password?"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block" [disabled]="!loginForm.form.valid">
+      Login
+    </button>
+  </form>
+
+  <div class="text-center mt-3">
+    <a href="/forgot-password" class="text-decoration-none">Forgot Password?</a>
+  </div>
+  <div class="text-center mt-2">
+    <p>Don't have an account?❌<a href="/sign-up" class="text-decoration-none">Sign Up✔</a></p>
+  </div>
+
+
+  <div *ngIf="isLoggedIn" class="mt-4 text-center">
+    <h3>Welcome, {{ loginData.username }}!</h3>
+    <p>Congrats,,,You are successfully logged in.👏👏</p>
+  </div>
+</div>

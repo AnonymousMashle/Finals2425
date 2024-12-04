@@ -1,58 +1,14 @@
 <router-outlet name="header">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-      <a class="navbar-brand" href="/">All About You</a>
-
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/services" routerLinkActive="active">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/service-details" routerLinkActive="active">Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/registration" routerLinkActive="active">Registration</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/profile" routerLinkActive="active">Profile</a>
-          </li>
-        </ul>
-
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
+  <app-header></app-header>
 </router-outlet>
 
 
-
-
-
-
 <div style="display: flex; height: 100vh;">
+
   <div style="flex: 1; border-right: 1px solid #ddd;">
-    <router-outlet name="left"></router-outlet>
+    <router-outlet name="left">
+      <app-service-list></app-service-list>
+    </router-outlet>
   </div>
 
 
@@ -62,8 +18,11 @@
 
 
   <div style="flex: 1; border-left: 1px solid #ddd;">
-    <router-outlet name="right"></router-outlet>
+    <router-outlet name="right">
+      <app-service-details></app-service-details>
+    </router-outlet>
   </div>
+
 </div>
 
 
@@ -71,13 +30,5 @@
 
 
 <router-outlet name="footer">
-  <footer class="footer">
-    <div class="container text-center">
-      <p>This is the Router-Example Footer🦶👣🏈⚽🐾</p>
-      <p>
-        <a routerLink="/about">About </a>
-        <a routerLink="/registration">Log in Now</a>
-      </p>
-    </div>
-  </footer>
+  <app-footer></app-footer>
 </router-outlet>

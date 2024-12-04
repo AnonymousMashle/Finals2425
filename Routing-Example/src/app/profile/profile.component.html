@@ -2,18 +2,46 @@
   <h2 class="text-center mb-4">Profile</h2>
   <form (ngSubmit)="onSubmit()" #profileForm="ngForm" class="shadow p-4 bg-light rounded">
 
+    <!-- First Name Field -->
     <div class="form-group">
-      <label for="username">Username</label>
+      <label for="firstName">First Name</label>
       <input
         type="text"
-        id="username"
+        id="firstName"
         class="form-control"
-        [(ngModel)]="user.username"
-        name="username"
+        [(ngModel)]="user.firstName"
+        name="firstName"
         required
       />
     </div>
 
+    <!-- Last Name Field -->
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input
+        type="text"
+        id="lastName"
+        class="form-control"
+        [(ngModel)]="user.lastName"
+        name="lastName"
+        required
+      />
+    </div>
+
+    <!-- Contact Field -->
+    <div class="form-group">
+      <label for="contact">Contact</label>
+      <input
+        type="text"
+        id="contact"
+        class="form-control"
+        [(ngModel)]="user.contact"
+        name="contact"
+        required
+      />
+    </div>
+
+    <!-- Address Field -->
     <div class="form-group">
       <label for="address">Address</label>
       <input
@@ -26,28 +54,69 @@
       />
     </div>
 
-
+    <!-- Sex Field -->
     <div class="form-group">
-      <label for="phone">Phone Number</label>
-      <input
-        type="text"
-        id="phone"
+      <label for="sex">Sex</label>
+      <select
+        id="sex"
         class="form-control"
-        [(ngModel)]="user.phone"
-        name="phone"
+        [(ngModel)]="user.sex"
+        name="sex"
+        required
+      >
+        <option value="" disabled selected>Select Sex</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <!-- Civil Status Field -->
+    <div class="form-group">
+      <label for="civilStatus">Civil Status</label>
+      <select
+        id="civilStatus"
+        class="form-control"
+        [(ngModel)]="user.civilStatus"
+        name="civilStatus"
+        required
+      >
+        <option value="" disabled selected>Select Civil Status</option>
+        <option value="Single">Single</option>
+        <option value="Married">Married</option>
+        <option value="Widowed">Widowed</option>
+        <option value="Divorced">Divorced</option>
+      </select>
+    </div>
+
+    <!-- Birthdate Field -->
+    <div class="form-group">
+      <label for="birthdate">Birthdate</label>
+      <input
+        type="date"
+        id="birthdate"
+        class="form-control"
+        [(ngModel)]="user.birthdate"
+        name="birthdate"
         required
       />
     </div>
 
+    <!-- Submit Button -->
     <button type="submit" class="btn btn-primary btn-block" [disabled]="!profileForm.form.valid">
       Save Profile
     </button>
   </form>
 
+  <!-- Profile Updated Section -->
   <div *ngIf="isSubmitted" class="mt-4">
     <h3>Profile Updated!</h3>
-    <p><strong>Username:</strong> {{ user.username }}</p>
+    <p><strong>First Name:</strong> {{ user.firstName }}</p>
+    <p><strong>Last Name:</strong> {{ user.lastName }}</p>
+    <p><strong>Contact:</strong> {{ user.contact }}</p>
     <p><strong>Address:</strong> {{ user.address }}</p>
-    <p><strong>Phone Number:</strong> {{ user.phone }}</p>
+    <p><strong>Sex:</strong> {{ user.sex }}</p>
+    <p><strong>Civil Status:</strong> {{ user.civilStatus }}</p>
+    <p><strong>Birthdate:</strong> {{ user.birthdate | date }}</p>
   </div>
 </div>
