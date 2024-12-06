@@ -17,6 +17,11 @@
       [(ngModel)]="newService.description" name="description"
       required placeholder="Enter Service Description"/>
 
+    <label for="price">Price:</label>
+    <input id="price" type="text"
+      [(ngModel)]="newService.price" name="Price"
+      required placeholder="Enter Price"/>
+
     <button type="submit" class="add-btn">Add Service</button>
   </form>
 
@@ -26,7 +31,9 @@
         <th>Service ID</th>
         <th>Service Name</th>
         <th>Service Description</th>
+        <th>Price</th>
         <th>Actions</th>
+
       </tr>
     </thead>
     <tbody>
@@ -34,10 +41,11 @@
         <td>{{ service.id }}</td>
         <td>{{ service.name }}</td>
         <td>{{ service.description }}</td>
+        <td>{{ newService.price }}</td>
         <td>
-          <button class="view-btn" (click)="viewService(service.id)">View</button>
-          <button class="edit-btn" (click)="editService(service.id)">Edit</button>
-          <button class="delete-btn" (click)="deleteService(service.id)">Delete</button>
+          <button class="view-btn" (click)="viewServiceDetails(service.id)">View</button>
+          <button class="edit-btn" (click)="editServiceDetails(service.id)">Edit</button>
+          <button class="delete-btn" (click)="deleteServiceDetails(service.id)">Delete</button> 
         </td>
       </tr>
     </tbody>

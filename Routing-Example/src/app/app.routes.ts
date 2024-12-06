@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { ServiceListComponent } from './service-list/service-list.component';
 import { MoreComponent } from './more/more.component';
+import { BranchesComponent } from './branches/branches.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -21,11 +22,13 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent, title: 'Login Page'},
   { path: 'header', component: HeaderComponent, outlet: 'header'},
   { path: 'footer', component: FooterComponent, outlet: 'footer'},
+  { path: 'branches', component: BranchesComponent},
   { path: 'services', component: ServicesComponent, title: 'Service Page'},
   { path: 'service-details', component: ServiceDetailsComponent, title: 'Details Page'},
   { path: 'service-list', component: ServiceListComponent},
 
-  { path: 'more', component: MoreComponent}
+  { path: 'more', component: MoreComponent},
+  
 ];
 
 @NgModule({

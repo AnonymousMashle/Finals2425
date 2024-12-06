@@ -11,5 +11,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './service-list.component.css'
 })
 export class ServiceListComponent {
+services: any;
 
 }
