@@ -1,0 +1,49 @@
+<div class="container">
+  <form *ngIf="!isEditing">
+    <h2>User Profile</h2>
+
+
+
+
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" [value]="user.name" readonly />
+    </div>
+
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" [value]="user.email" readonly />
+    </div>
+
+    <div>
+      <label for="courses">Enrolled Courses:</label>
+      <textarea id="courses" readonly>{{ user.courses.join(', ') }}</textarea>
+    </div>
+
+    <button (click)="toggleEditMode()">Edit Profile</button>
+  </form>
+
+
+  
+
+  <form *ngIf="isEditing" (ngSubmit)="saveProfile()">
+    <h3>Edit Profile</h3>
+
+    <div>
+      <label for="editName">Name:</label>
+      <input type="text" id="editName" [(ngModel)]="editUser.name" name="editName" />
+    </div>
+
+    <div>
+      <label for="editEmail">Email:</label>
+      <input type="email" id="editEmail" [(ngModel)]="editUser.email" name="editEmail" />
+    </div>
+
+    <div>
+      <label for="editCourses">Enrolled Courses (comma-separated):</label>
+      <textarea id="editCourses" [(ngModel)]="editUser.courses" name="editCourses"></textarea>
+    </div>
+
+    <button type="submit">Save Changes</button>
+  </form>
+</div>
