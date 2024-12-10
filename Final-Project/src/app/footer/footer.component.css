@@ -1,0 +1,22 @@
+footer {
+  position: fixed; 
+  bottom: 0; 
+  left: 0; 
+  width: 100%; 
+  background-color: #e5e5e5;
+  text-align: center;
+}
+
+
+.card {
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.25rem;
+}
+
+.btn-primary {
+  width: 100%;
+}

@@ -1,1 +1,18 @@
-<p>consultation works!</p>
+<div class="container mt-5">
+  <h2 class="text-center">Consultation Schedule</h2>
+  <div class="card mt-4">
+    <div class="card-header">
+       These are the Available Slots
+    </div>
+    <ul class="list-group list-group-flush">
+      <li *ngFor="let slot of consultationSlots; let i = index" class="list-group-item d-flex justify-content-between align-items-center">
+        {{ slot.date }} - {{ slot.time }}
+        <button class="btn btn-primary btn-sm" (click)="setAppointment(i)">Set Appointment</button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="alert alert-success mt-4" *ngIf="appointmentMessage">
+    {{ appointmentMessage }}
+  </div>
+</div>
