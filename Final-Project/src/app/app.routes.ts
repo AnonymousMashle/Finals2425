@@ -14,6 +14,6 @@ export const routes: Routes = [
   { path : 'class-record', component: ClassRecordComponent, title: 'Class Record'},
   { path : 'footer', component: FooterComponent},
   { path : 'contact', component: ContactComponent},
-  { path : 'consultation', component: ConsultationComponent}
+  { path : 'consultation', component: ConsultationComponent},
 
 ];

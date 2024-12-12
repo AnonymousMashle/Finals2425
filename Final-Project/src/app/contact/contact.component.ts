@@ -17,9 +17,9 @@ export class ContactComponent {
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
-      instructorName: ['', Validators.required],
-      school: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]]
+      instructorName: ['Erna-Kristy Martinez', Validators.required],
+      school: ['University of Baguio', Validators.required],
+      email: ['20233599@s.ubaguio.edu', [Validators.required, Validators.email]]
     });
   }
 

@@ -14,9 +14,9 @@ export class UserProfileComponent {
   isEditing = false;
 
   user = {
-    name: 'Reymart Samdao K.',
-    email: '20233599@s.ubaguio.edu',
-    courses: ['SITNET2', 'APPDEV1', 'PROJIT2']
+    name: '',
+    email: '',
+    courses: ['']
   };
 
   editUser = {
